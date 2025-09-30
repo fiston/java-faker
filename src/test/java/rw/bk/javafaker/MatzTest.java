@@ -1,0 +1,15 @@
+package rw.bk.javafaker;
+
+import org.junit.jupiter.api.Test;
+
+import static org.hamcrest.Matchers.isEmptyOrNullString;
+import static org.hamcrest.core.IsNot.not;
+import static org.hamcrest.MatcherAssert.assertThat;
+
+public class MatzTest extends AbstractFakerTest {
+
+    @Test
+    public void quote() {
+        assertThat(faker.matz().quote(), not(isEmptyOrNullString()));
+    }
+}

@@ -1,0 +1,55 @@
+# encoding: UTF-8
+rw:
+  faker:
+    address:
+      postcode: /[A-Z]{2}\d{4}/  # Format like KG1234 (not officially used, but representative)
+      province: [Kigali City, Eastern Province, Northern Province, Southern Province, Western Province]
+      district: [Bugesera, Gatsibo, Kayonza, Kirehe, Ngoma, Nyagatare, Rwamagana, Gasabo, Kicukiro, Nyarugenge, Burera, Gakenke, Gicumbi, Musanze, Rulindo, Gisagara, Huye, Kamonyi, Muhanga, Nyamagabe, Nyanza, Nyaruguru, Ruhango, Karongi, Ngororero, Nyabihu, Nyamasheke, Rubavu, Rusizi, Rutsiro]
+      country_code: ['RW']
+      default_country: [Rwanda]
+    internet:
+      domain_suffix: [rw, com, org, co.rw, ac.rw, gov.rw]
+    phone_number:
+      formats: ['0250 ### ### ###', '250 ### ### ###', '+250 ### ### ###']
+    cell_phone:
+      formats: ['078# ### ###', '079# ### ###', '072# ### ###', '073# ### ###', '078 ### ####', '079 ### ####', '072 ### ####', '073 ### ####', '0788 ### ###', '0789 ### ###', '0728 ### ###', '0738 ### ###']
+
+    name:
+      first_name: ["Uwase", "Mugabo", "Ishimwe", "Imena", "Karenzi", "Mutoni", "Nsengiyumva",
+                   "Uwamahoro", "Habimana", "Niyonzima", "Ndayisaba", "Uwineza", "Ingabire",
+                   "Muhire", "Rukundo", "Nkusi", "Gasana", "Tuyisenge", "Byiringiro", "Umuhoza",
+                   "Ntirenganya", "Iradukunda", "Umutoni", "Ishimwe", "Ingabire", "Uwera"]
+      last_name: ["Habimana", "Nsengiyumva", "Niyonzima", "Uwimana", "Ndayisaba", "Mukamana",
+                  "Ntawukuriryayo", "Uwitonze", "Kayitesi", "Nshimiyimana", "Mukantagara",
+                  "Uwamahoro", "Nyiramana", "Gasana", "Umurerwa", "Mugisha", "Nzabonimana",
+                  "Bizimana", "Mutabazi", "Tuyisenge", "Niyigena", "Umuhoza", "Mukandayisenga",
+                  "Ntirenganya", "Byukusenge", "Uwera", "Nshuti", "Kamanzi", "Murenzi",
+                  "Nkurunziza", "Hagenimana", "Umubyeyi", "Mutesi", "Bayingana", "Nkundimana",
+                  "Uwizeyimana", "Mugwaneza", "Nyirahabimana", "Twagiramungu", "Mukansanga"]
+      name:
+        - "#{first_name} #{last_name}"
+        - "#{first_name} #{last_name} #{last_name}"
+      name_with_middle:
+        - "#{first_name} #{last_name} #{last_name}"
+
+    company:
+      prefix: ["Koperative", "Ishyirahamwe", "Sosiyete", "Urugaga"]
+      suffix: [Ltd, PLC, SARL, Ltd., Co. Ltd, & Co., Inc.]
+      name:
+        - "#{prefix} #{Name.last_name} #{suffix}"
+        - "#{Name.last_name} #{suffix}"
+
+    lorem:
+      words: ["amahoro", "ubumwe", "dufatanye", "umuryango", "igihugu", "umugabo", "umugore",
+              "umwana", "inzu", "umuti", "amazi", "ibiryo", "umurimo", "ishuri", "amasomo",
+              "icyumba", "umuzi", "umusozi", "ikibaya", "uruzi", "ikiyaga", "imana", "ubuntu",
+              "urukundo", "kwizera", "umunsi", "ijoro", "umwaka", "ukwezi", "icyumweru",
+              "rimwe", "kabiri", "gatatu", "kane", "gatanu", "gatandatu", "karindwi", "umunani",
+              "icyenda", "icumi", "neza", "nabi", "murakoze", "muraho", "muramutse", "nimero",
+              "abantu", "umudugudu", "umujyi", "igisata", "amafaranga", "umukozi", "akazi",
+              "imbuto", "umusaruro", "umubyeyi", "abana", "inyubako", "imyidagaduro", "umuziki",
+              "imbere", "inyuma", "hejuru", "hasi", "ibumoso", "iburyo", "hano", "hariya",
+              "uyu", "uwo", "iyi", "iyo", "iki", "icyo", "aba", "abo", "ibi", "ibyo",
+              "ndabona", "ndumva", "ndavuga", "ndarya", "ndanywa", "ndagenda", "ndahagarara",
+              "byiza", "bibi", "gusa", "cyane", "gato", "kenshi", "rimwe", "kandi", "ariko",
+              "kuko", "niba", "iyo", "none", "ubu", "ejo", "ejobundi", "mbere", "nyuma"]
